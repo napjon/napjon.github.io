@@ -1,189 +1,58 @@
-import {
-  ArrowUpRight,
-  Check,
-  ChevronDown,
-  Code2,
-  BriefcaseBusiness,
-  Mail,
-  MapPin,
-  Sparkles,
-} from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Check, Plus } from 'lucide-react';
 
-const proof = [
-  {
-    index: '01',
-    label: 'Data reliability',
-    title: 'From recurring incidents to a dependable reporting layer.',
-    result: '30 → 2',
-    resultLabel: 'data incidents / month',
-    description:
-      'At Metadata, I owned six Airflow pipelines across a 10TB, 80-table analytics platform. I worked across ingestion, backfills, quality checks, and bronze-to-gold transformations.',
-    tags: ['Airflow', 'PySpark', 'Databricks', 'Python'],
-  },
-  {
-    index: '02',
-    label: 'Cross-repo systems',
-    title: 'A branching ad format, modeled into one coherent funnel.',
-    result: '6 repos',
-    resultLabel: 'from API to product UI',
-    description:
-      'I delivered LinkedIn Conversation Ads analytics end to end: extraction, schema, transforms, aggregation, reports, and frontend views. The branching message tree became comparable with five existing channels.',
-    tags: ['Data modeling', 'APIs', 'Analytics', 'Product delivery'],
-  },
-  {
-    index: '03',
-    label: 'Applied AI',
-    title: 'AI products designed around the workflow, not the demo.',
-    result: '4',
-    resultLabel: 'integrated SaaS platforms shipped',
-    description:
-      'At cerdai, I build end to end across TypeScript, React, Python, PostgreSQL, and LLM systems. The work spans cited retrieval, tool use, evaluation, reconciliation, and customer operations.',
-    tags: ['RAG', 'LLM evals', 'React', 'PostgreSQL'],
-  },
-];
-
-const capabilities = [
-  ['Data engineering', 'Pipelines, ingestion, backfills, quality, and reporting foundations.'],
-  ['Applied AI', 'RAG systems, agent workflows, evaluation, and production integrations.'],
-  ['Product systems', 'The connective work from API and data model to a usable product surface.'],
-];
+const email = 'mailto:napitupulu.jon@gmail.com';
 
 export default function Home() {
   return (
-    <main>
-      <div className="ambient ambient-one" />
-      <div className="ambient ambient-two" />
-
-      <nav className="nav shell" aria-label="Primary navigation">
-        <a className="wordmark" href="#top" aria-label="Jonathan Napitupulu home">
-          <span className="wordmark-mark">J</span>
-          <span>Jonathan Napitupulu</span>
-        </a>
-        <div className="nav-links">
-          <a href="#work">Selected work</a>
-          <a href="#about">Approach</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <a className="nav-cta" href="mailto:napitupulu.jon@gmail.com">
-          Let&apos;s talk <ArrowUpRight size={15} />
-        </a>
-      </nav>
-
-      <section className="hero shell" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow"><span className="eyebrow-dot" /> Senior data + AI engineer</p>
-          <h1>
-            I build the systems that make ambitious products <em>reliable.</em>
-          </h1>
-          <p className="hero-lede">
-            Ten years across data engineering, analytics, machine learning, and applied AI. I turn messy inputs into systems teams can trust and customers can use.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#work">See the proof <ArrowUpRight size={17} /></a>
-            <a className="button button-quiet" href="mailto:napitupulu.jon@gmail.com">Start a conversation <Mail size={16} /></a>
+    <>
+      <a className="skip-link" href="#main">Skip to content</a>
+      <header className="site-header wrap">
+        <a className="wordmark" href="#top">jon<span>.</span></a>
+        <nav aria-label="Main navigation">
+          <a href="#work">Work</a><a href="#services">Work with me</a><a href="#about">About</a>
+        </nav>
+        <a className="header-contact" href="#contact">Get in touch <ArrowUpRight size={17} /></a>
+      </header>
+      <main id="main">
+        <section className="hero wrap" id="top">
+          <div className="hero-topline"><p className="eyebrow">Jonathan Napitupulu / Data & AI engineer</p><p className="location">Jakarta, working globally</p></div>
+          <h1>Less firefighting.<br />More <span>forward.</span></h1>
+          <div className="hero-bottom">
+            <p className="hero-intro">I help teams fix unreliable pipelines, connect scattered data, and put AI to work on a real problem.</p>
+            <div className="hero-action-group"><a className="button primary" href="#services">Find your starting point <ArrowUpRight size={19} /></a><a className="inline-link" href="#work">A look at the work <ArrowDown size={16} /></a></div>
           </div>
-          <div className="hero-meta">
-            <span><MapPin size={14} /> Jakarta, Indonesia</span>
-            <span className="meta-separator" />
-            <span>Open to remote + EU relocation</span>
+          <div className="credentials"><span>10+ years building data systems</span><span>5 years working US Pacific hours</span><span>Projects & senior roles</span></div>
+        </section>
+        <section className="featured wrap" aria-labelledby="featured-title">
+          <div className="featured-copy"><p className="eyebrow">A result to start with / Metadata</p><h2 id="featured-title">From putting out fires<br />to trusting the numbers.</h2><p>I owned six Airflow pipelines across a 10TB analytics platform. The work covered ingestion, transformations, backfills, and data quality.</p><a className="inline-link" href="#work">Inside the work <ArrowUpRight size={17} /></a></div>
+          <div className="result-chart"><p className="chart-title">Monthly data incidents</p><div className="chart-row"><span>Before</span><div className="bar-track"><div className="bar before" /></div><strong>30</strong></div><div className="chart-row"><span>After</span><div className="bar-track"><div className="bar after" /></div><strong>2</strong></div><p className="chart-note"><strong>93% fewer incidents.</strong> More room for product work.</p></div>
+        </section>
+        <section className="section wrap" id="services" aria-labelledby="services-title">
+          <div className="section-title"><div><p className="eyebrow">Work with me / Scoped projects</p><h2 id="services-title">Start with the problem<br />costing you time.</h2></div><p>One clear scope, an agreed definition of done, and something your team can keep using after the handoff.</p></div>
+          <div className="offer-grid">
+            <article className="offer"><p className="offer-index">01 / RELIABILITY</p><h3>Stop fixing the same pipeline.</h3><p className="offer-problem">For teams whose reports arrive late, fail silently, or need another manual rerun.</p><ul><li><Check size={16} />Root-cause review of one pipeline</li><li><Check size={16} />Agreed repairs and data quality checks</li><li><Check size={16} />Recovery steps and a handover runbook</li></ul><p className="offer-start"><strong>Start with one troublesome workflow.</strong>Send its symptoms, stack, and current runtime. We’ll agree on the failure or performance baseline before changing it.</p><a className="inline-link" href={`${email}?subject=Pipeline%20repair%20project`}>Discuss a pipeline <ArrowUpRight size={17} /></a></article>
+            <article className="offer"><p className="offer-index">02 / INTEGRATION</p><h3>Get your systems telling the same story.</h3><p className="offer-problem">For teams reconciling CRM, advertising, and product numbers in spreadsheets.</p><ul><li><Check size={16} />One source connected to your data stack</li><li><Check size={16} />Shared metric definitions and backfill</li><li><Check size={16} />Validated data ready for reporting</li></ul><p className="offer-start"><strong>Start with one unanswered question.</strong>We’ll map the sources, agree what the numbers mean, and scope the path from API to a usable reporting dataset.</p><a className="inline-link" href={`${email}?subject=Data%20integration%20project`}>Discuss an integration <ArrowUpRight size={17} /></a></article>
+            <article className="offer"><p className="offer-index">03 / APPLIED AI</p><h3>Turn a pile of documents into useful answers.</h3><p className="offer-problem">For teams searching the same internal documents to answer recurring questions.</p><ul><li><Check size={16} />A pilot using one document collection</li><li><Check size={16} />Answers linked to their source material</li><li><Check size={16} />Evaluation against your real questions</li></ul><p className="offer-start"><strong>Start with a focused pilot.</strong>Choose the documents and questions that matter. Get a working assistant, test results, and clear limits before expanding.</p><a className="inline-link" href={`${email}?subject=Document%20AI%20pilot`}>Discuss an AI pilot <ArrowUpRight size={17} /></a></article>
           </div>
-        </div>
-
-        <div className="hero-card" aria-label="Current focus">
-          <div className="hero-card-top">
-            <span className="status-pill"><span /> Available for focused work</span>
-            <span className="card-index">2026 / 01</span>
-          </div>
-          <div className="orbit-wrap">
-            <div className="orbit orbit-outer" />
-            <div className="orbit orbit-inner" />
-            <div className="orbit-core"><Sparkles size={22} /></div>
-            <span className="orbit-label orbit-label-one">DATA</span>
-            <span className="orbit-label orbit-label-two">AI</span>
-            <span className="orbit-label orbit-label-three">PRODUCT</span>
-          </div>
-          <div className="hero-card-footer">
-            <div><strong>01</strong><span>focus: durable systems</span></div>
-            <ChevronDown size={16} />
-          </div>
-        </div>
-      </section>
-
-      <section className="proof-strip shell" aria-label="Selected proof points">
-        <div><strong>10+</strong><span>years building</span></div>
-        <div><strong>10TB</strong><span>analytics platform</span></div>
-        <div><strong>80M</strong><span>customer data scale</span></div>
-        <div><strong>235</strong><span>GitHub stars</span></div>
-      </section>
-
-      <section className="section shell" id="work">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">Selected work / 2022—2026</p>
-            <h2>Proof over promises.</h2>
-          </div>
-          <p className="section-intro">A few problems I&apos;ve taken from ambiguity to a measurable result.</p>
-        </div>
-        <div className="proof-grid">
-          {proof.map((item) => (
-            <article className="proof-card" key={item.index}>
-              <div className="proof-card-head"><span>{item.index}</span><span>{item.label}</span></div>
-              <h3>{item.title}</h3>
-              <div className="proof-result"><strong>{item.result}</strong><span>{item.resultLabel}</span></div>
-              <p>{item.description}</p>
-              <div className="tag-row">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section section-dark" id="about">
-        <div className="shell approach-grid">
-          <div>
-            <p className="eyebrow eyebrow-light">How I work</p>
-            <h2>Make the complicated part legible.</h2>
-            <p className="dark-lede">The best systems work is part architecture, part translation. I make the data model, tradeoffs, and next decision clear enough for the whole team to move.</p>
-            <a className="text-link text-link-light" href="https://github.com/napjon" target="_blank" rel="noreferrer">See the open-source trail <ArrowUpRight size={16} /></a>
-          </div>
-          <div className="capability-list">
-            {capabilities.map(([title, text], index) => (
-              <div className="capability" key={title}>
-                <span className="capability-number">0{index + 1}</span>
-                <div><h3>{title}</h3><p>{text}</p></div>
-                <Check size={17} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section shell career-section">
-        <div className="section-heading">
-          <div><p className="eyebrow">Experience / selected chapters</p><h2>Built across the stack.</h2></div>
-          <p className="section-intro">From 300-node clusters and customer analytics to AI-native products.</p>
-        </div>
-        <div className="career-list">
-          <div className="career-row"><span>2026—now</span><strong>Member of Technical Staff</strong><span>Stealth startup / cerdai</span><span>4 SaaS platforms, LLM + product systems</span></div>
-          <div className="career-row"><span>2022—2026</span><strong>Senior Data / Analytics Engineer</strong><span>Metadata.io</span><span>Experimentation, pipelines, attribution</span></div>
-          <div className="career-row"><span>2015—2022</span><strong>AI + data leadership</strong><span>Annex / Ewaysindo / Indosat / ADSKOM</span><span>ML, NLP, telecom, healthcare, marketing</span></div>
-        </div>
-      </section>
-
-      <section className="contact shell" id="contact">
-        <div className="contact-inner">
-          <div><p className="eyebrow">Have a hard systems problem?</p><h2>Let&apos;s make the next version <em>work.</em></h2></div>
-          <div className="contact-actions">
-            <a className="button button-primary" href="mailto:napitupulu.jon@gmail.com">Email Jonathan <Mail size={17} /></a>
-            <div className="social-links">
-              <a href="https://www.linkedin.com/in/napitupulu-jon" target="_blank" rel="noreferrer" aria-label="LinkedIn"><BriefcaseBusiness size={18} /></a>
-              <a href="https://github.com/napjon" target="_blank" rel="noreferrer" aria-label="GitHub"><Code2 size={18} /></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="footer shell"><span>Jonathan Napitupulu / Jakarta</span><span>Data, AI, and the connective tissue between them.</span></footer>
-    </main>
+          <p className="engagement-note"><Plus size={16} />After an initial review, I’ll propose the scope, deliverables, timeline, and fee for you to approve before work begins.</p>
+        </section>
+        <section className="work-section" id="work" aria-labelledby="work-title"><div className="section wrap">
+          <div className="section-title"><div><p className="eyebrow">Selected work</p><h2 id="work-title">The work behind<br />the offer.</h2></div><p>From the reporting a team relies on every morning to the systems behind a new product feature.</p></div>
+          <article className="case"><div className="case-meta"><strong>Metadata</strong><span>2022–2026 / Data engineering</span></div><div><h3>Make reporting dependable at 10TB scale.</h3><p>I owned six Airflow pipelines and worked across ingestion, backfills, quality checks, and bronze-to-gold transformations over 80 tables.</p><details><summary>What the work involved</summary><p>Python, PySpark, Databricks, and Airflow formed the reporting foundation. My work included repairing data flows and optimizing Salesforce aggregation, alongside ongoing operation of the analytics platform.</p></details></div><div className="case-result"><strong>8h → 2h</strong><span>Salesforce aggregation time</span><p>Monthly data incidents also fell from 30 to 2 across the platform.</p></div></article>
+          <article className="case"><div className="case-meta"><strong>Metadata</strong><span>Product analytics integration</span></div><div><h3>Take a new ad format all the way to reporting.</h3><p>I delivered LinkedIn Conversation Ads analytics across extraction, storage, transformations, backend aggregation, and frontend reporting.</p><details><summary>What made it challenging</summary><p>The ad format used branching message trees. I mapped them into a reporting model with consistent funnel outcomes, backfilled historical data, and preserved compatibility with five existing channels.</p></details></div><div className="case-result"><strong>6 repos</strong><span>One integration, source to interface</span><p>Data modeling and product delivery handled together.</p></div></article>
+          <article className="case"><div className="case-meta"><strong>Stealth startup / cerdai</strong><span>2026–present / Applied AI</span></div><div><h3>Build the workflow around the AI.</h3><p>As Member of Technical Staff, I build across AI, analytics, and product systems: cited retrieval, tool use, evaluation, and the interfaces people use to do the work.</p><details><summary>What I build with</summary><p>TypeScript, React, Python, and PostgreSQL across four integrated SaaS platforms. The work spans document assistants, analytics, reconciliation, and customer operations.</p></details></div><div className="case-result"><strong>End to end</strong><span>Retrieval, evaluation, and product UI</span><p>From the underlying data to a usable application.</p></div></article>
+        </div></section>
+        <section className="section wrap about" id="about" aria-labelledby="about-title">
+          <div className="about-copy"><p className="eyebrow">A little about me</p><h2 id="about-title">Hi, I’m Jon.<br />I like getting the<br />whole thing working.</h2><p>I’m a data and AI engineer based in Jakarta. Over the past decade, I’ve worked on advertising platforms, telecom data, analytics, and AI products.</p><p>I’m comfortable going beyond the pipeline: tracing an API, untangling a data model, working through the reporting logic, and getting the result into a product.</p><p>I’ve spent five years working US Pacific hours with a remote team. I’m open to remote work and relocation to Europe.</p><a className="inline-link" href="https://github.com/napjon" target="_blank" rel="noreferrer">Explore my code on GitHub <ArrowUpRight size={17} /></a></div>
+          <div><div className="timeline">
+            <article className="career-item"><span className="period">JUN 2026–PRESENT</span><h3>Member of Technical Staff</h3><p className="company">Stealth startup / cerdai</p><p>Applied AI, analytics, and full-stack product development.</p></article>
+            <article className="career-item"><span className="period">FEB 2022–JUN 2026</span><h3>Senior Data / Analytics Engineer</h3><p className="company">Metadata</p><p>Data platform reliability, experimentation, and marketing analytics.</p></article>
+            <article className="career-item"><span className="period">2015–2022 / EARLIER EXPERIENCE</span><h3>Data engineering, machine learning & team leadership</h3><p className="company">Annex · Ewaysindo · Indosat / Eureka · ADSKOM</p><p>Led a seven-engineer team at Ewaysindo. Worked with telecom data spanning 80 million subscribers at Indosat / Eureka.</p></article>
+          </div><aside className="hiring-note"><h3>Looking for this experience on your team?</h3><p>I’m interested in senior data engineering and applied AI roles with ownership across systems and delivery.</p><a className="inline-link" href={`${email}?subject=Senior%20engineering%20opportunity`}>Let’s discuss the role <ArrowUpRight size={16} /></a></aside></div>
+        </section>
+        <section className="contact" id="contact" aria-labelledby="contact-title"><div className="wrap contact-inner"><div><p className="eyebrow">Let’s work together</p><h2 id="contact-title">What’s slowing<br />your team down?</h2></div><div className="contact-copy"><p>Send me a short description of the problem, your current stack, and what a good outcome looks like. I’ll help turn that into a clear first step.</p><a className="button" href={`${email}?subject=Let%E2%80%99s%20work%20together`}>Tell me about your project <ArrowUpRight size={19} /></a><a className="contact-email" href={email}>napitupulu.jon@gmail.com</a></div></div></section>
+      </main>
+      <footer className="wrap footer"><a className="wordmark" href="#top">jon<span>.</span></a><p>Jonathan Napitupulu · Jakarta, Indonesia</p><a href="https://github.com/napjon" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={15} /></a><a href="https://www.linkedin.com/in/napitupulu-jon" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={15} /></a></footer>
+    </>
   );
 }
-

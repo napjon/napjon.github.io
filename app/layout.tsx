@@ -7,20 +7,20 @@ const instrument = Instrument_Serif({ variable: '--font-display', subsets: ['lat
 const mono = DM_Mono({ variable: '--font-mono', subsets: ['latin'], weight: ['400', '500'] });
 
 export const metadata: Metadata = {
-  title: 'Jonathan Napitupulu — Senior Data + AI Engineer',
-  description: 'Jonathan Napitupulu builds reliable data systems, applied AI, and the product layers between them.',
+  title: 'Jonathan Napitupulu | Senior Data + AI Engineer',
+  description: 'Senior data and AI engineer. Pipeline repair, reporting integrations, and focused AI pilots, backed by 10+ years of delivery.',
   metadataBase: new URL('https://napjon.github.io'),
   openGraph: {
-    title: 'Jonathan Napitupulu — Senior Data + AI Engineer',
-    description: 'Reliable data systems, applied AI, and the connective tissue between them.',
+    title: 'Jonathan Napitupulu | Senior Data + AI Engineer',
+    description: 'Pipeline repair, reporting integrations, and focused AI pilots. 10+ years building data systems.',
     url: 'https://napjon.github.io',
     siteName: 'Jonathan Napitupulu',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'Jonathan Napitupulu — Senior Data + AI Engineer',
-    description: 'Reliable data systems, applied AI, and the connective tissue between them.',
+    title: 'Jonathan Napitupulu | Senior Data + AI Engineer',
+    description: 'Pipeline repair, reporting integrations, and focused AI pilots. 10+ years building data systems.',
   },
 };
 
